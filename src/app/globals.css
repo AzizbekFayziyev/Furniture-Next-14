@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+body,
+html {
+     overflow-x: hidden;
+}
+
+body {
+     @apply font-inter;
+}
+
+.container {
+     @apply px-2 mx-auto;
+}
+
+/* Hero section */
+
+.hero {
+     position: relative;
+     background: url(/hero.png) no-repeat;
+     background-size: cover;
+     height: 1150px;
+}
+
+.hero::before {
+     content: "";
+     @apply w-full h-[45px] bg-white/90 absolute bottom-0 left-0;
+     box-shadow: 0 -30px 18px rgb(255 255 255 / 0.8);
+}
+
+/* Advantages section */
+
+.advantage:nth-child(2),
+.advantage:nth-child(4) {
+     @apply -mt-36;
+}
+
+/* Swiper styles */
+
+.swiper {
+     @apply w-full h-full
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+     color: #556652 !important;
+}
